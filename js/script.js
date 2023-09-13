@@ -18,8 +18,13 @@ let counterImg = 0;
 for(let i = 0; i < imagesList.length; i++){
   const image = imagesList[i];
   itemsWrapper.innerHTML += `<img src="${image}" alt="" class="item d-none">`;
-  thumbContent.innerHTML += `<img src="${image}" alt="">`;
+  thumbContent.innerHTML += `<img src="${image}" alt="" class="thumb-item">`;
 }
 
+const itemList = document.getElementsByClassName('item');
+const thumbList = document.getElementsByClassName('thumb-item');
+
+itemList[counterImg].classList.remove('d-none');
+thumbList[counterImg].classList.add('active');
 
 

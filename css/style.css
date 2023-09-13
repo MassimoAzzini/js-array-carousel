@@ -8,7 +8,7 @@
   width: 100%;
   height: calc(100% / 5);
   object-fit: cover;
-  filter: opacity(0.5);
+  filter: opacity(0.7);
 }
 
 .btn-cst {
@@ -34,6 +34,6 @@
 }
 
 .thumbnail img.active {
-  border: 3px solid blue;
+  border: 3px solid white;
   filter: opacity(1);
 }

@@ -13,3 +13,17 @@
   height: calc(100% / 5);
   object-fit: cover;
 }
+
+.btn-cst {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn.up {
+  top: 5px
+}
+
+.btn.down {
+  bottom: 5px;
+}

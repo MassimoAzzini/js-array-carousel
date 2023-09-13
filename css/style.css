@@ -1,7 +1,3 @@
-.container-cst {
-  background-color: aquamarine;
-}
-
 .items-wrapper img {
   width: 100%;
   height: 100%;
@@ -12,22 +8,32 @@
   width: 100%;
   height: calc(100% / 5);
   object-fit: cover;
+  filter: opacity(0.5);
 }
 
 .btn-cst {
   position: absolute;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.6rem;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  background-color: white;
+  border-radius: 50%;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.btn.up {
+.btn-cst.up {
   top: 5px
 }
 
-.btn.down {
+.btn-cst.down {
   bottom: 5px;
 }
 
-.active {
+.thumbnail img.active {
   border: 3px solid blue;
+  filter: opacity(1);
 }

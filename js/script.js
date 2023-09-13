@@ -4,6 +4,8 @@
 // 4. assegno la possibilita ai bottoni di resettare lo scorrimento delle immagini per ricominciare a vedere le immagini
 const itemsWrapper = document.querySelector('.items-wrapper');
 const thumbContent = document.querySelector('.thumb-content')
+const btnUp = document.querySelector('.up')
+const btnDown = document.querySelector('.down')
 
 const imagesList = [
   'img/01.webp',
@@ -27,4 +29,24 @@ const thumbList = document.getElementsByClassName('thumb-item');
 itemList[counterImg].classList.remove('d-none');
 thumbList[counterImg].classList.add('active');
 
+btnDown.addEventListener('click', function(){
+  itemList[counterImg].classList.add('d-none');
+  thumbList[counterImg].classList.remove('active');
 
+  counterImg++;
+
+  itemList[counterImg].classList.remove('d-none');
+  thumbList[counterImg].classList.add('active');
+
+});
+
+btnUp.addEventListener('click', function(){
+  itemList[counterImg].classList.add('d-none');
+  thumbList[counterImg].classList.remove('active');
+
+  counterImg--;
+
+  itemList[counterImg].classList.remove('d-none');
+  thumbList[counterImg].classList.add('active');
+
+});

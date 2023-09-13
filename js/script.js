@@ -34,6 +34,12 @@ btnDown.addEventListener('click', function(){
   thumbList[counterImg].classList.remove('active');
 
   counterImg++;
+  
+  if(counterImg > imagesList.length - 1){
+
+    counterImg = 0;
+
+  }
 
   itemList[counterImg].classList.remove('d-none');
   thumbList[counterImg].classList.add('active');
@@ -45,6 +51,12 @@ btnUp.addEventListener('click', function(){
   thumbList[counterImg].classList.remove('active');
 
   counterImg--;
+
+  if(counterImg < 0){
+
+    counterImg = (imagesList.length - 1);
+
+  }
 
   itemList[counterImg].classList.remove('d-none');
   thumbList[counterImg].classList.add('active');

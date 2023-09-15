@@ -29,36 +29,36 @@ const thumbList = document.getElementsByClassName('thumb-item');
 itemList[counterImg].classList.remove('d-none');
 thumbList[counterImg].classList.add('active');
 
+
+
 btnDown.addEventListener('click', function(){
-  itemList[counterImg].classList.add('d-none');
-  thumbList[counterImg].classList.remove('active');
-
-  counterImg++;
-  
-  if(counterImg > imagesList.length - 1){
-
-    counterImg = 0;
-
-  }
-
-  itemList[counterImg].classList.remove('d-none');
-  thumbList[counterImg].classList.add('active');
-
+  downUp(true);
 });
 
 btnUp.addEventListener('click', function(){
+  downUp(false);
+});
+
+
+function downUp(isDown){
   itemList[counterImg].classList.add('d-none');
   thumbList[counterImg].classList.remove('active');
 
-  counterImg--;
+  if(isDown){
 
-  if(counterImg < 0){
+    counterImg++;
+    if(counterImg === imagesList.length) counterImg = 0;
 
-    counterImg = (imagesList.length - 1);
+  }else{
+
+    counterImg--;
+    if(counterImg < 0) counterImg = imagesList.length - 1;
 
   }
-
+  
   itemList[counterImg].classList.remove('d-none');
   thumbList[counterImg].classList.add('active');
 
-});
+};
+
+
